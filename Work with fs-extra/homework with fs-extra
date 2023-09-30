@@ -1,0 +1,29 @@
+const fs = require ('fs-extra')
+
+fs.writeJsonSync ('./package.json', {name:'FS-Extra Test'})
+
+fs.writeFileSync ('./FS-Extra Test/some.txt')
+
+fs.writeJsonSync ('./package.json', {name:'Result of use FS-Extra'})
+
+fs.moveSync ('/FS-Extra Test/some.txt', '/Result of use FS-Extra/some.txt')
+
+fs.writeJsonSync ('./package.json', {name:'Additions'})
+
+fs.copySync ('/Result of use FS-Extra/some.txt', '/Additions/some.txt')
+
+fs.removeSync('some.txt')
+
+fs.removeSync ('/FS-Extra Test','/Result of use FS-Extra','/Additions')
+
+
+
+
+
+
+
+
+
+
+
+
